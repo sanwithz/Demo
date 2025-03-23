@@ -32,9 +32,7 @@
     <script>
       window.onload = function() {
         const params = new URLSearchParams(window.location.search);
-        
-        // Check for the 'apps' parameter
-        let targetUrl = params.get("demo");
+        let targetUrl = params.get("link");
         if (targetUrl) {
           targetUrl = decodeURIComponent(targetUrl);
           document.getElementById("myiframe").src = targetUrl;
