@@ -32,7 +32,9 @@
     <script>
       window.onload = function() {
         const params = new URLSearchParams(window.location.search);
-        let targetUrl = params.get("link");
+        
+        // Check for the 'apps' parameter
+        let targetUrl = params.get("apps");
         if (targetUrl) {
           targetUrl = decodeURIComponent(targetUrl);
           document.getElementById("myiframe").src = targetUrl;
@@ -54,3 +56,4 @@
     <iframe id="myiframe" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;"></iframe>
   </body>
 </html>
+
